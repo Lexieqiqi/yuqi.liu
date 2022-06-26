@@ -16,6 +16,8 @@ jobs:
           node-version: "14"
       - name: Get node dependencies
         run: npm install
+      - name: Installing my packages
+        run: npm ci
       - name: Build page
         run: npm run build
       - name: Export static page
