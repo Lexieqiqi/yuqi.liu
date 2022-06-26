@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Link from "next/link"
 import { AiOutlineInstagram, AiOutlineYoutube, AiFillLinkedin } from 'react-icons/ai';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -12,7 +13,7 @@ export default function Home() {
       <Head>
         <div className={styles.head}>
             <div>
-                <a href="/" className={styles.logo}>Yuqi Liu</a>
+                <Link href={{pathname: "/", query: { name: 'test' }}}><span className={styles.logo}>Yuqi Liu</span></Link>
             </div>
             <div className={styles.menu}>
                 <ul>
