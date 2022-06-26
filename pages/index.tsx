@@ -1,10 +1,14 @@
-import React from 'react';
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Link from "next/link"
-import { AiOutlineInstagram, AiOutlineYoutube, AiFillLinkedin } from 'react-icons/ai';
-import { Carousel } from 'react-responsive-carousel';
+import React from "react";
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import Link from "next/link";
+import {
+  AiOutlineInstagram,
+  AiOutlineYoutube,
+  AiFillLinkedin,
+} from "react-icons/ai";
+import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default function Home() {
@@ -12,42 +16,68 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <div className={styles.head}>
-            <div>
-                <Link href={{pathname: "/", query: { name: 'test' }}}><span className={styles.logo}>Yuqi Liu</span></Link>
-            </div>
-            <div className={styles.menu}>
-                <ul>
-                    <li><a>Story</a></li>
-                    <li>|</li>
-                    <li><a>Blog</a></li>
-                    <li>|</li>
-                    <li><a>Projects</a></li>
-                    <li>|</li>
-                    <li><a>Gallery</a></li>
-                    <li>|</li>
-                    <li><a>Contact</a></li>
-                </ul>
-            </div>
-            <div className={styles.media}>
-                <ul>
-                    <li><a href=""><AiOutlineInstagram /></a></li>
-                    <li><a href="https://m.youtube.com/channel/UCFVnh0qsdNFHUTi1VtgOjcA"><AiOutlineYoutube /></a></li>
-                    <li><a href="https://www.linkedin.com/in/yuqi-liu-158b17193/"><AiFillLinkedin /></a></li>
-                </ul>
-            </div>
+          <div>
+            <Link href={{ pathname: "/", query: { name: "test" } }}>
+              <span className={styles.logo}>Yuqi Liu</span>
+            </Link>
+          </div>
+          <div className={styles.menu}>
+            <ul>
+              <li>
+                <a>Story</a>
+              </li>
+              <li>|</li>
+              <li>
+                <a>Blog</a>
+              </li>
+              <li>|</li>
+              <li>
+                <a>Projects</a>
+              </li>
+              <li>|</li>
+              <li>
+                <a>Gallery</a>
+              </li>
+              <li>|</li>
+              <li>
+                <a>Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div className={styles.media}>
+            <ul>
+              <li>
+                <a href="">
+                  <AiOutlineInstagram />
+                </a>
+              </li>
+              <li>
+                <a href="https://m.youtube.com/channel/UCFVnh0qsdNFHUTi1VtgOjcA">
+                  <AiOutlineYoutube />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/yuqi-liu-158b17193/">
+                  <AiFillLinkedin />
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </Head>
 
       <main className={styles.main}>
         <div className={styles.intro_pic_container}>
-            <div className={styles.intro_pic}>
-                <Image src="/intro_pic/bus_2.jpeg" 
-                        alt="my story"
-                        className={styles.ip}
-                        width={500}
-                        height={450} 
-                        layout="fixed"/>
-            </div>
+          <div className={styles.intro_pic}>
+            <Image
+              src="/intro_pic/bus_2.jpeg"
+              alt="my story"
+              className={styles.ip}
+              width={500}
+              height={450}
+              layout="fixed"
+            />
+          </div>
         </div>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">my wonderland!</a>
@@ -90,12 +120,12 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
+  );
 }
