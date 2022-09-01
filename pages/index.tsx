@@ -17,7 +17,7 @@ export default function Home() {
       <Head>
         <div className={styles.head}>
           <div>
-            <Link href={{ pathname: "/", query: { name: "test" } }}>
+            <Link href="/">
               <span className={styles.logo}>Yuqi Liu</span>
             </Link>
           </div>
@@ -28,19 +28,27 @@ export default function Home() {
               </li>
               <li>|</li>
               <li>
-                <a>Blog</a>
+                <Link href="/blog">
+                  <a>Blog</a>
+                </Link>
               </li>
               <li>|</li>
               <li>
-                <a>Projects</a>
+                <Link href="/projects">
+                  <a>Projects</a>
+                </Link>
               </li>
               <li>|</li>
               <li>
-                <a>Gallery</a>
+                <Link href="/gallery">
+                  <a>Gallery</a>
+                </Link>
               </li>
               <li>|</li>
               <li>
-                <a>Contact</a>
+                <Link href="/contact">
+                  <a>Contact</a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -73,25 +81,82 @@ export default function Home() {
               src="/intro_pic/bus_2.jpeg"
               alt="my story"
               className={styles.ip}
-              width={500}
-              height={450}
+              width={700}
+              height={600}
               layout="fixed"
             />
           </div>
         </div>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">my wonderland!</a>
-        </h1>
+
+        <div className={styles.sliding_container}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="600"
+            height="50"
+            viewBox="0 0 600 50"
+            preserveAspectRatio="xMinYMin"
+            className="slide"
+          >
+            <rect
+              className={styles.box}
+              x="135"
+              y="15"
+              width="30"
+              height="30"
+              rx="15"
+            ></rect>
+            <circle cx="150" cy="30" r="10">
+              <a className=""></a>
+            </circle>
+            <rect
+              className={styles.box}
+              x="235"
+              y="15"
+              width="30"
+              height="30"
+              rx="15"
+            ></rect>
+            <circle cx="250" cy="30" r="10"></circle>
+            <rect
+              className={styles.box}
+              x="335"
+              y="15"
+              width="30"
+              height="30"
+              rx="15"
+            ></rect>
+            <circle cx="350" cy="30" r="10"></circle>
+            <rect
+              className={styles.box}
+              x="435"
+              y="15"
+              width="30"
+              height="30"
+              rx="15"
+            ></rect>
+            <circle cx="450" cy="30" r="10"></circle>
+          </svg>
+        </div>
+
+        <div className={styles.introduction}>
+          <p>
+            Hi, Nice to meet you here.
+            <br /> I’m Yuqi Liu, currently a master student in KTH. I’m a
+            software enginner and UX/UI designer.
+            <br />
+            Currently📍located in Beijing, China, from Wuhan, China.
+          </p>
+        </div>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Projects &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
+            <p>Here presents my previous projects information</p>
           </a>
 
           <a href="https://nextjs.org/learn" className={styles.card}>
             <h2>Blog &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+            <p>I write sometimes to express my thoughts.</p>
           </a>
 
           <a
@@ -99,7 +164,10 @@ export default function Home() {
             className={styles.card}
           >
             <h2>Story &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+            <p>
+              Here are some interesting stories that I have encountered on the
+              road.
+            </p>
           </a>
 
           <a
@@ -108,7 +176,8 @@ export default function Home() {
           >
             <h2>Gallery &rarr;</h2>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              I present some of the beautiful photos that I have captured on the
+              road.
             </p>
           </a>
         </div>
